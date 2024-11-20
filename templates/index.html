@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommandations de Cadeaux</title>
+</head>
+<body>
+    <h1>Recommandations de Cadeaux</h1>
+    
+    <form method="POST">
+        <label for="age">Âge :</label>
+        <select name="age" id="age">
+            <option value="entre0et3ans">0-3 ans</option>
+            <option value="entre4et9ans">4-9 ans</option>
+            <option value="entre10et16ans">10-16 ans</option>
+        </select><br><br>
+        
+        <label for="sexe">Sexe :</label>
+        <select name="sexe" id="sexe">
+            <option value="masculin">Masculin</option>
+            <option value="feminine">Féminin</option>
+        </select><br><br>
+        
+        <label for="interest">Centre d'intérêt :</label>
+        <select name="interest" id="interest">
+            <option value="football">Football</option>
+            <option value="theatre">Théâtre</option>
+            <option value="dessin">Dessin</option>
+            <option value="musique">Musique</option>
+            <option value="sport">Sport</option>
+        </select><br><br>
+        
+        <button type="submit">Obtenir des recommandations</button>
+    </form>
+    
+    {% if result %}
+    <h2>Suggestions :</h2>
+    <pre>{{ result }}</pre>
+    {% else %}
+    <p>Aucune recommandation disponible. Veuillez remplir le formulaire.</p>
+    {% endif %}
+    
+</body>
+</html>
