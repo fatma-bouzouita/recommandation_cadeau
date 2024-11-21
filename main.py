@@ -16,34 +16,97 @@ class Resultat(Fact):
 # Définir les règles de recommandation
 class InterfaceEngine(KnowledgeEngine):
 
-    @Rule(Cadeau(age="entre0et3ans"), Cadeau(sexe="masculin"))
+    @Rule(Cadeau(age="0-2ans"), Cadeau(sexe="masculin"))
     def cadeau_bebe_garcon(self):
         self.declare(Resultat(result=("Vous pouvez lui offrir: \n"
                                        "- Nounours \n"
                                        "- Ensemble de vêtements \n"
                                        "- Jouets sensoriels")))
         
-    @Rule(Cadeau(age="entre0et3ans"), Cadeau(sexe="feminine"))
+    @Rule(Cadeau(age="0-2ans"), Cadeau(sexe="feminine"))
     def cadeau_bebe_fille(self):
         self.declare(Resultat(result=("Vous pouvez lui offrir: \n"
                                        "- Robe \n"
                                        "- Bracelet de naissance \n"
                                        "- Couverture rose")))
 
-    @Rule(Cadeau(age="entre4et9ans"), Cadeau(sexe="masculin"), Cadeau(interest="football"))
-    def cadeau_enfant_garcon(self):
-        self.declare(Resultat(result=("Vous pouvez lui offrir: \n"
-                                       "- Un ballon \n"
-                                       "- Une voiture commandée à distance \n"
-                                       "- Un pull avec un dessin de chien")))
+   
 
-    # Exemple de règle pour une adolescente intéressée par le théâtre
-    @Rule(Cadeau(age="entre10et16ans"), Cadeau(sexe="feminine"), Cadeau(interest="theatre"))
-    def cadeau_adolescente_theatre(self):
+    # Petite enfance : 3-5 ans
+    @Rule(Cadeau(age="3-5ans"), Cadeau(interest="dessin"))
+    def cadeau_enfant_dessin(self):
         self.declare(Resultat(result=("Vous pouvez lui offrir: \n"
-                                       "- Un ticket pour une pièce de théâtre \n"
-                                       "- Une robe colorée \n"
-                                       "- Une petite tortue")))
+                                       "- Livres à colorier \n"
+                                       "- Feutres lavables \n"
+                                       "- Kit de dessin pour enfants")))
+
+    @Rule(Cadeau(age="3-5ans"), Cadeau(interest="histoires"))
+    def cadeau_enfant_histoires(self):
+        self.declare(Resultat(result=("Vous pouvez lui offrir: \n"
+                                       "- Livres illustrés \n"
+                                       "- Marionnettes \n"
+                                       "- Coffret d'histoires audio")))
+
+    # Enfance moyenne : 6-9 ans
+    @Rule(Cadeau(age="6-9ans"), Cadeau(interest="jeux_de_construction"))
+    def cadeau_enfant_construction(self):
+        self.declare(Resultat(result=("Vous pouvez lui offrir: \n"
+                                       "- Lego \n"
+                                       "- Meccano \n"
+                                       "- Puzzles 3D")))
+
+    @Rule(Cadeau(age="6-9ans"), Cadeau(interest="sport"))
+    def cadeau_enfant_sport(self):
+        self.declare(Resultat(result=("Vous pouvez lui offrir: \n"
+                                       "- Ballon de football \n"
+                                       "- Trottinette \n"
+                                       "- Mini-table de ping-pong")))
+
+    # Adolescents : 10-17 ans
+    @Rule(Cadeau(age="13-17ans"), Cadeau(interest="technologie"))
+    def cadeau_adolescent_technologie(self):
+        self.declare(Resultat(result=("Vous pouvez lui offrir: \n"
+                                       "- Casque audio \n"
+                                       "- Montre connectée \n"
+                                       "- Mini-drone")))
+
+    @Rule(Cadeau(age="13-17ans"), Cadeau(interest="jeux_video"))
+    def cadeau_adolescent_jeux_video(self):
+        self.declare(Resultat(result=("Vous pouvez lui offrir: \n"
+                                       "- Carte cadeau Steam \n"
+                                       "- Manette de jeu \n"
+                                       "- Abonnement à un service de jeux en ligne")))
+
+    # Adultes jeunes : 18-40 ans
+    @Rule(Cadeau(age="18-24ans"), Cadeau(interest="voyage"))
+    def cadeau_jeune_adulte_voyage(self):
+        self.declare(Resultat(result=("Vous pouvez lui offrir: \n"
+                                       "- Sac à dos de voyage \n"
+                                       "- Carnet de voyage \n"
+                                       "- Appareil photo instantané")))
+
+    @Rule(Cadeau(age="25-40ans"), Cadeau(interest="cuisine"))
+    def cadeau_adulte_cuisine(self):
+        self.declare(Resultat(result=("Vous pouvez lui offrir: \n"
+                                       "- Robot de cuisine \n"
+                                       "- Cours de cuisine \n"
+                                       "- Livre de recettes gastronomiques")))
+
+    # Seniors : 60 ans et plus
+    @Rule(Cadeau(age="60plus"), Cadeau(interest="jardinage"))
+    def cadeau_senior_jardinage(self):
+        self.declare(Resultat(result=("Vous pouvez lui offrir: \n"
+                                       "- Outils de jardin ergonomiques \n"
+                                       "- Livres sur les plantes \n"
+                                       "- Abonnement à un magazine de jardinage")))
+
+    @Rule(Cadeau(age="60plus"), Cadeau(interest="confort"))
+    def cadeau_senior_confort(self):
+        self.declare(Resultat(result=("Vous pouvez lui offrir: \n"
+                                       "- Coussin chauffant \n"
+                                       "- Plaid doux \n"
+                                       "- Pantoufles confortables")))
+
 
 # Initialiser le moteur d'inférence
 engine = InterfaceEngine()

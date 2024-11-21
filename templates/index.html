@@ -1,45 +1,168 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Recommandations de Cadeaux</title>
 </head>
+
 <body>
     <h1>Recommandations de Cadeaux</h1>
-    
-    <form method="POST">
+
+    <form method="POST" id="gift-form">
         <label for="age">Âge :</label>
-        <select name="age" id="age">
-            <option value="entre0et3ans">0-3 ans</option>
-            <option value="entre4et9ans">4-9 ans</option>
-            <option value="entre10et16ans">10-16 ans</option>
-        </select><br><br>
-        
+        <select name="age" id="age" onchange="updateOptions()">
+            <option value="" selected>Choisir un âge</option>
+            <option value="0-2ans">0-2 ans (Bébés)</option>
+            <option value="3-5ans">3-5 ans (Petite enfance)</option>
+            <option value="6-9ans">6-9 ans (Enfance moyenne)</option>
+            <option value="10-12ans">10-12 ans (Pré-adolescents)</option>
+            <option value="13-17ans">13-17 ans (Adolescents)</option>
+            <option value="18-24ans">18-24 ans (Jeunes adultes)</option>
+            <option value="25-40ans">25-40 ans (Adultes jeunes)</option>
+            <option value="41-60ans">41-60 ans (Adultes moyens)</option>
+            <option value="60plus">60 ans et plus (Seniors)</option>
+        </select>
+
         <label for="sexe">Sexe :</label>
         <select name="sexe" id="sexe">
+            <option value="" selected>Choisir un sexe</option>
             <option value="masculin">Masculin</option>
             <option value="feminine">Féminin</option>
-        </select><br><br>
-        
+        </select>
+
         <label for="interest">Centre d'intérêt :</label>
         <select name="interest" id="interest">
-            <option value="football">Football</option>
-            <option value="theatre">Théâtre</option>
-            <option value="dessin">Dessin</option>
-            <option value="musique">Musique</option>
-            <option value="sport">Sport</option>
-        </select><br><br>
-        
-        <button type="submit">Obtenir des recommandations</button>
+            <option value="" selected>Choisir un centre d'intérêt</option>
+        </select>
+
+        <label for="occasion">Occasion :</label>
+        <select name="occasion" id="occasion">
+            <option value="" selected>Choisir une occasion</option>
+        </select>
+
+        <label for="relation">Relation avec le destinataire :</label>
+        <select name="relation" id="relation">
+            <option value="" selected>Choisir une relation</option>
+            <option value="parent">Parent</option>
+            <option value="ami">Ami</option>
+            <option value="collegue">Collègue</option>
+            <option value="conjoint">Conjoint(e)</option>
+            <option value="enfant">Enfant</option>
+            <option value="frere_soeur">Frère/Sœur</option>
+            <option value="grand_parent">Grand-parent</option>
+            <option value="enseignant">Enseignant(e)</option>
+            <option value="voisin">Voisin(e)</option>
+        </select>
+
+        <div class="button-container">
+            <button type="submit" class="submit-button">Obtenir des recommandations</button>
+            <button type="button" onclick="resetForm()" class="reset-button">
+                <i class="fas fa-sync-alt"></i> Réinitialiser le formulaire
+            </button>
+        </div>
     </form>
-    
+
     {% if result %}
-    <h2>Suggestions :</h2>
-    <pre>{{ result }}</pre>
+    <div class="result-container">
+        <h2>Suggestions :</h2>
+        <pre>{{ result }}</pre>
+    </div>
     {% else %}
-    <p>Aucune recommandation disponible. Veuillez remplir le formulaire.</p>
+    <p class="no-result">Aucune recommandation disponible. Veuillez remplir le formulaire.</p>
     {% endif %}
-    
+
+    <script>
+        const data = {
+            "0-2ans": {
+                interests: ["Jouets d'éveil", "Peluches", "Musique douce", "Livres interactifs"],
+                occasions: ["Naissance", "Anniversaire"]
+            },
+            "3-5ans": {
+                interests: ["Dessin", "Puzzles", "Histoires", "Jeux éducatifs"],
+                occasions: ["Anniversaire", "Entrée à l'école"]
+            },
+            "6-9ans": {
+                interests: ["Jeux de construction", "Livres", "Sport", "Activités artistiques"],
+                occasions: ["Anniversaire", "Récompense scolaire"]
+            },
+            "10-12ans": {
+                interests: ["Jeux vidéo", "Livres", "Kits scientifiques", "Sport", "Football"],
+                occasions: ["Anniversaire", "Succès académique"]
+            },
+            "13-17ans": {
+                interests: ["Technologie", "Livres", "Sport", "Jeux vidéo", "Football"],
+                occasions: ["Anniversaire", "Succès académique"]
+            },
+            "18-24ans": {
+                interests: ["Mode", "Voyage", "Technologie", "Livres", "Cuisine", "Sport", "Jeux vidéo", "Décoration", "Football"],
+                occasions: ["Anniversaire", "Graduation"]
+            },
+            "25-40ans": {
+                interests: ["Mode", "Décoration", "Voyage", "Livres", "Technologie", "Sport", "Jeux vidéo", "Football"],
+                occasions: ["Anniversaire", "Mariage"]
+            },
+            "41-60ans": {
+                interests: ["Jardinage", "Décoration", "Cuisine", "Livres", "Voyage", "Jeux de société"],
+                occasions: ["Anniversaire", "Retraite"]
+            },
+            "60plus": {
+                interests: ["Livres", "Décoration", "Confort", "Jardinage", "Jeux de société"],
+                occasions: ["Anniversaire", "Retraite"]
+            }
+        };
+
+        //load intrest and occasion with age provided
+        function updateOptions() {
+            // Get the selected age
+            const age = document.getElementById("age").value;
+
+            // Get refrences
+            const interestSelect = document.getElementById("interest");
+            const occasionSelect = document.getElementById("occasion");
+            // clears any previous options
+
+            interestSelect.innerHTML = '<option value="" selected>Choisir un centre d\'intérêt</option>';
+            occasionSelect.innerHTML = '<option value="" selected>Choisir une occasion</option>';
+            if (data[age]) {
+                //create an option with every interest with age selected
+                data[age].interests.forEach(interest => {
+                    const option = document.createElement("option");
+                    option.value = interest.toLowerCase().replace(/ /g, "_"); //if there is espace remplace it in value
+                    option.textContent = interest;
+                    interestSelect.appendChild(option);
+                });
+
+                //create an option with every occasion with age selected
+                data[age].occasions.forEach(occasion => {
+                    const option = document.createElement("option");
+                    option.value = occasion.toLowerCase().replace(/ /g, "_");//if there is espace remplace it in value
+                    option.textContent = occasion;
+                    occasionSelect.appendChild(option);
+                });
+            }
+        }
+
+        // Function to reset form and results
+        function resetForm() {
+            document.getElementById("gift-form").reset();  //default state
+            updateOptions();
+            clearResults();
+        }
+
+        //clear results
+        function clearResults() {
+            const resultContainers = document.querySelectorAll('.result-container');
+            resultContainers.forEach(container => {
+                container.innerHTML = "<p>Aucune recommandation disponible. Veuillez remplir le formulaire.</p>";
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", updateOptions);
+    </script>
 </body>
+
 </html>
