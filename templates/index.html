@@ -78,7 +78,6 @@
     <script>
         const data = {
             "0-2ans": {
-                interests: ["Jouets d'éveil", "Peluches", "Musique douce", "Livres interactifs"],
                 occasions: ["Naissance", "Anniversaire"]
             },
             "3-5ans": {
@@ -128,14 +127,15 @@
             interestSelect.innerHTML = '<option value="" selected>Choisir un centre d\'intérêt</option>';
             occasionSelect.innerHTML = '<option value="" selected>Choisir une occasion</option>';
             if (data[age]) {
-                //create an option with every interest with age selected
-                data[age].interests.forEach(interest => {
-                    const option = document.createElement("option");
-                    option.value = interest.toLowerCase().replace(/ /g, "_"); //if there is espace remplace it in value
-                    option.textContent = interest;
-                    interestSelect.appendChild(option);
-                });
-
+                if (data[age].interests) {
+                    //create an option with every interest with age selected
+                    data[age].interests.forEach(interest => {
+                        const option = document.createElement("option");
+                        option.value = interest.toLowerCase().replace(/ /g, "_"); //if there is espace remplace it in value
+                        option.textContent = interest;
+                        interestSelect.appendChild(option);
+                    });
+                }
                 //create an option with every occasion with age selected
                 data[age].occasions.forEach(occasion => {
                     const option = document.createElement("option");
