@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='gift.jpg') }}">
     <title>Recommandations de Cadeaux</title>
 </head>
 
@@ -70,9 +71,30 @@
     <div class="result-container">
         <h2>Suggestions :</h2>
         <pre>{{ result }}</pre>
+        {% if 'naissance' in result.lower() %}
+        <p><b>Vous pouvez consulter d'autres idées de cadeaux de naissance ici :</b>
+            <a href='https://www.cadeaux.com/cadeau-naissance' class="gift-link">
+                Cadeau de Naissance
+            </a>
+        </p>
+        {% endif %}
+        {% if 'anniversaire' in result.lower() %}
+        <p><b>Vous pouvez consulter d'autres idées de cadeaux d'anniversaire ici :</b>
+            <a href='https://www.cadeaux.com/cadeau-anniversaire' class="gift-link">
+                Cadeau d'Anniversaire
+            </a>
+        </p>
+        {% endif %}
     </div>
+
     {% else %}
-    <p class="no-result">Aucune recommandation disponible. Veuillez remplir le formulaire.</p>
+    <p class="no-result">
+        <b>Aucune recommandation disponible.</b><br>
+        Veuillez remplir le formulaire avec les informations requises pour recevoir des suggestions de cadeaux
+        personnalisées.
+        <br><br>
+        <i>Assurez-vous de bien sélectionner les options appropriées comme l'âge, le sexe et l'occasion.</i>
+    </p>
     {% endif %}
 
     <script>
@@ -81,7 +103,7 @@
                 occasions: ["Naissance", "Anniversaire"]
             },
             "3-5ans": {
-                interests: ["Dessin", "Puzzles", "Histoires", "Jeux éducatifs","divertissement"],
+                interests: ["Dessin", "Puzzles", "Histoires", "Jeux éducatifs", "divertissement"],
                 occasions: ["Anniversaire", "Entrée à l'école"]
             },
             "6-9ans": {
@@ -157,7 +179,8 @@
         function clearResults() {
             const resultContainers = document.querySelectorAll('.result-container');
             resultContainers.forEach(container => {
-                container.innerHTML = "<p>Aucune recommandation disponible. Veuillez remplir le formulaire.</p>";
+                container.innerHTML = 
+                "<p>Aucune recommandation disponible. Veuillez remplir le formulaire.</p>";
             });
         }
 
