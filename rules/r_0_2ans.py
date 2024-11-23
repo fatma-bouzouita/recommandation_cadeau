@@ -5,7 +5,7 @@ from models.engine_base import InterfaceEngine
 #subclass of InterfaceEngine
 class InterfaceEngine_0_2ans(InterfaceEngine):
     #0-2 ans garçon
-    @Rule(Cadeau(age="0-2ans"), Cadeau(sexe="masculin"), Cadeau(occasion="naissance"))
+    @Rule(Cadeau(age="0-2ans",sexe="masculin",occasion="naissance"))
     def cadeau_naissance_garcon(self):
         self.declare(Resultat(result=(
             "Pour une naissance (garçon), voici des idées de cadeaux : \n"
@@ -16,7 +16,7 @@ class InterfaceEngine_0_2ans(InterfaceEngine):
             "- Couverture douce et confortable aux motifs animaliers."
         )))
 
-    @Rule(Cadeau(age="0-2ans"), Cadeau(sexe="masculin"), Cadeau(occasion="anniversaire"))
+    @Rule(Cadeau(age="0-2ans",sexe="masculin",occasion="anniversaire"))
     def cadeau_anniversaire_garcon(self):
         self.declare(Resultat(result=(
             "Pour un anniversaire (garçon), voici des idées : \n"
@@ -28,23 +28,21 @@ class InterfaceEngine_0_2ans(InterfaceEngine):
             "- Veilleuse colorée en forme de fusée ou étoile."
             "- Ensemble de vêtements thématiques (ex : super-héros ou animaux)."
         )))
-
-    # kif nzidhom ywali yaady hethom baed saat o inegligi occasion !! a voir !!
         
-    # @Rule(Cadeau(age="0-2ans"), Cadeau(sexe="masculin"))
-    # def cadeau_bebe_garcon(self):
-    #     self.declare(Resultat(result=(
-    #         "Pour un garçon de 0-2 ans, vous pouvez offrir : \n"
-    #         "- Jouets d'éveil adaptés à son âge (ex : cubes empilables, puzzles simples) \n"
-    #         "- Livres interactifs ou sonores \n"
-    #         "- Tapis de jeu coloré \n"
-    #         "- Peluches ou jouets thématiques (voitures, animaux)."
-    #         "- Ensemble de vêtements adaptés à la saison \n"
-    #         "- Veilleuses avec musique apaisante \n"
-    #         )))
+    @Rule(Cadeau(age="0-2ans"), Cadeau(sexe="masculin"))
+    def cadeau_bebe_garcon(self):
+        self.declare(Resultat(result=(
+           "Pour un garçon de 0-2 ans, vous pouvez offrir : \n"
+           "- Jouets d'éveil adaptés à son âge (ex : cubes empilables, puzzles simples) \n"
+             "- Livres interactifs ou sonores \n"
+             "- Tapis de jeu coloré \n"
+             "- Peluches ou jouets thématiques (voitures, animaux)."
+             "- Ensemble de vêtements adaptés à la saison \n"
+             "- Veilleuses avec musique apaisante \n"
+             )))
 
     # 0-2 ans fille
-    @Rule(Cadeau(age="0-2ans"), Cadeau(sexe="feminine"), Cadeau(occasion="naissance"))
+    @Rule(Cadeau(age="0-2ans",sexe="feminine",occasion="naissance"))
     def cadeau_naissance_fille(self):
         self.declare(Resultat(result=(
         "Pour une naissance (fille), voici des idées de cadeaux : \n"
@@ -55,7 +53,7 @@ class InterfaceEngine_0_2ans(InterfaceEngine):
         "- Couverture douce personnalisée avec le prénom."
         )))
 
-    @Rule(Cadeau(age="0-2ans"), Cadeau(sexe="feminine"), Cadeau(occasion="anniversaire"))
+    @Rule(Cadeau(age="0-2ans",sexe="feminine",occasion="anniversaire"))
     def cadeau_anniversaire_fille(self):
             self.declare(Resultat(result=(
             "Pour un anniversaire (fille), voici des idées : \n"
@@ -67,16 +65,16 @@ class InterfaceEngine_0_2ans(InterfaceEngine):
             "- Tapis de jeu décoratif ou musical \n"
             )))
 
-    # @Rule(Cadeau(age="0-2ans"), Cadeau(sexe="feminine"))
-    # def cadeau_bebe_fille(self):
-    #     self.declare(Resultat(result=(
-    #         "Pour une fille de 0-2 ans, vous pouvez offrir : \n"
-    #         "- Jouets interactifs avec textures et couleurs vives \n"
-    #         "- Peluches ou poupées adaptées à son âge \n"
-    #         "- Robes ou ensembles de vêtements doux \n"
-    #         "- Jouets sensoriels d'éveil (ex : jouets en silicone, anneaux de dentition) \n"
-    #         "- Couverture douce personnalisée \n"
-    #         "- Livres avec textures et illustrations colorées \n"
-    #         "- Veilleuses en forme d'animaux ou avec lumière douce."
-    #         )))
+    @Rule(Cadeau(age="0-2ans",sexe="feminine"))
+    def cadeau_bebe_fille(self):
+         self.declare(Resultat(result=(
+             "Pour une fille de 0-2 ans, vous pouvez offrir : \n"
+             "- Jouets interactifs avec textures et couleurs vives \n"
+             "- Peluches ou poupées adaptées à son âge \n"
+             "- Robes ou ensembles de vêtements doux \n"
+             "- Jouets sensoriels d'éveil (ex : jouets en silicone, anneaux de dentition) \n"
+             "- Couverture douce personnalisée \n"
+             "- Livres avec textures et illustrations colorées \n"
+             "- Veilleuses en forme d'animaux ou avec lumière douce."
+             )))
             

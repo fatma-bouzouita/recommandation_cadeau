@@ -35,7 +35,7 @@ def index():
         sexe = request.form["sexe"]
         interest = request.form["interest"]
         occasion = request.form["occasion"]
-        # print(age,sexe,occasion)
+        print(age,sexe,occasion,interest)
 
         engine_class = AGE_ENGINE_MAP.get(age)
         if engine_class is None:
