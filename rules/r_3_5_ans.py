@@ -62,7 +62,7 @@ class InterfaceEngine_3_5ans(InterfaceEngine):
             "- Histoires courtes avec autocollants pour accompagner la lecture\n"
         )))
 
-     # Jeux éducatifs
+    # Jeux éducatifs
     @Rule(Cadeau(age="3-5ans", sexe="masculin", interest="jeux_éducatifs", occasion="anniversaire"))
     def garcon_jeux_educatifs_anniversaire(self):
         self.declare(Resultat(result=(
@@ -84,7 +84,7 @@ class InterfaceEngine_3_5ans(InterfaceEngine):
             "- Jeu de dominos colorés pour travailler la logique\n"
         )))
 
-         # Divertissement
+    # Divertissement
     @Rule(Cadeau(age="3-5ans", sexe="masculin", interest="divertissement", occasion="anniversaire"))
     def garcon_divertissement_anniversaire(self):
         self.declare(Resultat(result=(
@@ -107,8 +107,8 @@ class InterfaceEngine_3_5ans(InterfaceEngine):
             "- Jeu de quilles ou mini bowling adapté à l'intérieur\n"
         )))
 
-         #fille
-         # puzzle
+    #fille
+    # puzzle
     @Rule(Cadeau(age="3-5ans", sexe="feminine", interest="puzzles", occasion="anniversaire"))
     def fille_puzzles_anniversaire(self):
         self.declare(Resultat(result=(
@@ -145,7 +145,7 @@ class InterfaceEngine_3_5ans(InterfaceEngine):
         "- Livre personnalisé avec l'enfant comme héroïne\n"
         "- Histoires interactives avec autocollants à ajouter sur les pages\n"
     )))
-        #jeux_éducatifs
+    #jeux_éducatifs
     @Rule(Cadeau(age="3-5ans", sexe="feminine", interest="jeux_éducatifs", occasion="anniversaire"))
     def fille_jeux_educatifs_anniversaire(self):
         self.declare(Resultat(result=(
@@ -166,7 +166,7 @@ class InterfaceEngine_3_5ans(InterfaceEngine):
         "- Kit STEM adapté aux jeunes filles pour éveiller la curiosité scientifique\n"
         "- Jeu de dominos colorés pour travailler la logique et l'observation\n"
     )))
-         # divertissement
+    # divertissement
     @Rule(Cadeau(age="3-5ans", sexe="feminine", interest="divertissement", occasion="anniversaire"))
     def fille_divertissement_anniversaire(self):
         self.declare(Resultat(result=(
