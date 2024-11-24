@@ -32,8 +32,8 @@ class InterfaceEngine_0_2ans(InterfaceEngine):
     @Rule(Cadeau(age="0-2ans"), Cadeau(sexe="masculin"))
     def cadeau_bebe_garcon(self):
         self.declare(Resultat(result=(
-           "Pour un garçon de 0-2 ans, vous pouvez offrir : \n"
-           "- Jouets d'éveil adaptés à son âge (ex : cubes empilables, puzzles simples) \n"
+            "Pour un garçon de 0-2 ans, vous pouvez offrir : \n"
+            "- Jouets d'éveil adaptés à son âge (ex : cubes empilables, puzzles simples) \n"
              "- Livres interactifs ou sonores \n"
              "- Tapis de jeu coloré \n"
              "- Peluches ou jouets thématiques (voitures, animaux)."

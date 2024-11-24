@@ -210,10 +210,3 @@ class InterfaceEngine_3_5ans(InterfaceEngine):
         "- Livres éducatifs sur les bases du dessin, comme apprendre les formes et les couleurs\n"
     )))
 
-
-
-
-
-
-
-

@@ -45,7 +45,7 @@ def index():
         engine = engine_class()
         engine.reset()
         # Déclarer le fait avec les données soumises par l'utilisateur
-        engine.declare(Cadeau(age=age, sexe=sexe, interest=interest,occasion=occasion))
+        engine.declare(Cadeau(age=age, sexe=sexe, interest=interest, occasion=occasion))
         # Exécuter le moteur de règles pour obtenir le résultat
         engine.run()
         
