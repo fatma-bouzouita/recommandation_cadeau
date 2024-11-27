@@ -3,7 +3,7 @@ from models.facts import Cadeau, Resultat
 from models.engine_base import InterfaceEngine
 
 # subclass of InterfaceEngine
-class InterfaceEngine_6_9ans(InterfaceEngine):
+class InterfaceEngine_6_11ans(InterfaceEngine):
     #fille------------------------------------------------------------------------------------------------------------------
     #anniversaire
     @Rule(Cadeau(age="6-11ans", sexe="feminine", interest="jeux_de_construction", occasion="anniversaire"))
