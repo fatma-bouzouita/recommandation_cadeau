@@ -2,14 +2,14 @@ from flask import Flask, render_template, request
 from experta import *
 from models.facts import Cadeau, Resultat
 from rules.r_0_2ans import  InterfaceEngine_0_2ans
-from rules.r_10_12ans import InterfaceEngine_10_12ans
+from rules.r_12_17ans import InterfaceEngine_10_12ans
 from rules.r_13_17ans import InterfaceEngine_13_17ans
 from rules.r_18_24 import InterfaceEngine_18_24ans
 from rules.r_25_40 import InterfaceEngine_25_40ans
 from rules.r_3_5_ans import InterfaceEngine_3_5ans
 from rules.r_41_60 import InterfaceEngine_41_30ans
 from rules.r_60 import InterfaceEngine_60ans
-from rules.r_6_9ans import InterfaceEngine_6_9ans
+from rules.r_6_11ans import InterfaceEngine_6_9ans
 
 app = Flask(__name__)
 
