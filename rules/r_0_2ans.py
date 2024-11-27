@@ -4,7 +4,7 @@ from models.engine_base import InterfaceEngine
 
 #subclass of InterfaceEngine
 class InterfaceEngine_0_2ans(InterfaceEngine):
-    #0-2 ans garçon
+    #garcon------------------------------------------------------------------------------------------------------------------
     @Rule(Cadeau(age="0-2ans",sexe="masculin",occasion="naissance"))
     def cadeau_naissance_garcon(self):
         self.declare(Resultat(result=(
@@ -41,7 +41,7 @@ class InterfaceEngine_0_2ans(InterfaceEngine):
              "- Veilleuses avec musique apaisante \n"
              )))
 
-    # 0-2 ans fille
+    #fille------------------------------------------------------------------------------------------------------------------
     @Rule(Cadeau(age="0-2ans",sexe="feminine",occasion="naissance"))
     def cadeau_naissance_fille(self):
         self.declare(Resultat(result=(

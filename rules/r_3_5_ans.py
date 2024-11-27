@@ -4,7 +4,7 @@ from models.engine_base import InterfaceEngine
 
 # subclass of InterfaceEngine
 class InterfaceEngine_3_5ans(InterfaceEngine):
-    # masculin
+    #garcon------------------------------------------------------------------------------------------------------------------
     # Dessin
     @Rule(Cadeau(age="3-5ans", sexe="masculin", interest="dessin", occasion="anniversaire"))
     def garcon_dessin_anniversaire(self):
@@ -107,7 +107,7 @@ class InterfaceEngine_3_5ans(InterfaceEngine):
             "- Jeu de quilles ou mini bowling adapté à l'intérieur\n"
         )))
 
-    #fille
+    #fille------------------------------------------------------------------------------------------------------------------
     # puzzle
     @Rule(Cadeau(age="3-5ans", sexe="feminine", interest="puzzles", occasion="anniversaire"))
     def fille_puzzles_anniversaire(self):
