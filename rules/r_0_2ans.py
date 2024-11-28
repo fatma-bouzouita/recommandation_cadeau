@@ -34,12 +34,12 @@ class InterfaceEngine_0_2ans(InterfaceEngine):
         self.declare(Resultat(result=(
             "Pour un garçon de 0-2 ans, vous pouvez offrir : \n"
             "- Jouets d'éveil adaptés à son âge (ex : cubes empilables, puzzles simples) \n"
-             "- Livres interactifs ou sonores \n"
-             "- Tapis de jeu coloré \n"
-             "- Peluches ou jouets thématiques (voitures, animaux)."
-             "- Ensemble de vêtements adaptés à la saison \n"
-             "- Veilleuses avec musique apaisante \n"
-             )))
+            "- Livres interactifs ou sonores \n"
+            "- Tapis de jeu coloré \n"
+            "- Peluches ou jouets thématiques (voitures, animaux)."
+            "- Ensemble de vêtements adaptés à la saison \n"
+            "- Veilleuses avec musique apaisante \n"
+            )))
 
     #fille------------------------------------------------------------------------------------------------------------------
     @Rule(Cadeau(age="0-2ans",sexe="feminine",occasion="naissance"))
@@ -67,14 +67,13 @@ class InterfaceEngine_0_2ans(InterfaceEngine):
 
     @Rule(Cadeau(age="0-2ans",sexe="feminine"))
     def cadeau_bebe_fille(self):
-         self.declare(Resultat(result=(
-             "Pour une fille de 0-2 ans, vous pouvez offrir : \n"
-             "- Jouets interactifs avec textures et couleurs vives \n"
-             "- Peluches ou poupées adaptées à son âge \n"
-             "- Robes ou ensembles de vêtements doux \n"
-             "- Jouets sensoriels d'éveil (ex : jouets en silicone, anneaux de dentition) \n"
-             "- Couverture douce personnalisée \n"
-             "- Livres avec textures et illustrations colorées \n"
-             "- Veilleuses en forme d'animaux ou avec lumière douce."
-             )))
-            
+            self.declare(Resultat(result=(
+            "Pour une fille de 0-2 ans, vous pouvez offrir : \n"
+            "- Jouets interactifs avec textures et couleurs vives \n"
+            "- Peluches ou poupées adaptées à son âge \n"
+            "- Robes ou ensembles de vêtements doux \n"
+            "- Jouets sensoriels d'éveil (ex : jouets en silicone, anneaux de dentition) \n"
+            "- Couverture douce personnalisée \n"
+            "- Livres avec textures et illustrations colorées \n"
+            "- Veilleuses en forme d'animaux ou avec lumière douce."
+            )))

@@ -108,7 +108,6 @@ class InterfaceEngine_12_17ans(InterfaceEngine):
                                         "- Des accessoires musicaux, comme un porte-clés ou un t-shirt à l'effigie de ses artistes préférés \n"
                                         "- Une lampe ou décoration en forme d'instrument de musique")))
 
-
     #garcon------------------------------------------------------------------------------------------------------------------
     #anniversaire
     @Rule(Cadeau(age="12-17ans", sexe="masculin", interest="jeux_vidéo", occasion="anniversaire"))
@@ -182,7 +181,7 @@ class InterfaceEngine_12_17ans(InterfaceEngine):
                                         "- Un livre sur les dinosaures ou les animaux, avec des images interactives \n"
                                         "- Un atlas pour enfants avec des illustrations captivantes \n"
                                         "- Un abonnement à un magazine éducatif pour enfants")))
-    
+
     @Rule(Cadeau(age="12-17ans", sexe="masculin", interest="sport", occasion="succès_académique"))
     def garcon_succès_académique_sport(self):
         self.declare(Resultat(result=("Pour un adolescent aimant le sport, voici des idées de cadeaux pour son succès académique : \n"

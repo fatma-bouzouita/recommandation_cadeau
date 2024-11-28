@@ -324,4 +324,3 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Une carte cadeau pour une boutique de mode qu'il aime \n"
                                         "- Des accessoires modernes, comme une casquette, un chapeau ou une écharpe trendy \n"
                                         "- Une consultation avec un styliste personnel ou une session de shopping assistée.")))
-
