@@ -12,7 +12,6 @@ class InterfaceEngine_25_40ans(InterfaceEngine):
                                     "- Une carte cadeau dans une boutique de vêtements\n"
                                     "- Des bijoux tendance\n"
                                     "- Un abonnement à un magazine de mode"
-                                    "- Des bijoux tendance\n"
                                     "- Un cours de stylisme ou un atelier de création\n"
                                     "- Une paire de chaussures élégantes\n"
                                     "- Un sac à main de marque\n"

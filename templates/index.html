@@ -35,7 +35,7 @@
         </select>
 
         <label for="interest">Centre d'intérêt :</label>
-        <select name="interest" id="interest" required>
+        <select name="interest" id="interest">
             <option value="" selected>Choisir un centre d'intérêt</option>
         </select>
 
@@ -56,7 +56,7 @@
     {% if result %}
     <div class="result-container">
         <h2>Suggestions :</h2>
-        <pre>{{ result }}</pre>
+        <pre id="result">{{ result }}</pre>
         {% if 'naissance' in result.lower() %}
         <p><b>Vous pouvez consulter d'autres idées de cadeaux de naissance ici :</b>
             <a href='https://www.cadeaux.com/cadeau-naissance' class="gift-link" target="_blank">
@@ -98,14 +98,9 @@
         </p>
         {% endif %}
 
-        {% if 'adolescent' in result.lower()%}
-        <p><b>Vous pouvez consulter d'autres idées pour une occasion de mariage : </b>
-            <a href='https://www.cadeaux.com/cadeau-mariage'
-             class="gift-link" target="_blank">Cadeau de mariage
-            </a>
-        </p>
-        {% endif %}
-
+        <button class="whatsapp-button" onclick="shareOnWhatsApp()">
+            <i class="fab fa-whatsapp"></i> Partager sur WhatsApp
+        </button>
     </div>
 
     {% else %}
@@ -200,6 +195,14 @@
                 "<p>Aucune recommandation disponible. Veuillez remplir le formulaire.</p>";
             });
         }
+        //share on whats
+        function shareOnWhatsApp() {
+            const resultElement = document.getElementById("result");
+            const resultText = resultElement ? resultElement.textContent : "Aucune recommandation disponible.";
+            const message = encodeURIComponent(`Voici mes recommandations de cadeaux :\n${resultText}`);
+            const whatsappURL = `https://api.whatsapp.com/send?text=${message}`;
+            window.open(whatsappURL, '_blank');
+}
 
         document.addEventListener("DOMContentLoaded", updateOptions);
     </script>
