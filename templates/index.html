@@ -15,7 +15,7 @@
 
     <form method="POST" id="gift-form">
         <label for="age">Âge :</label>
-        <select name="age" id="age" onchange="updateOptions()">
+        <select name="age" id="age" onchange="updateOptions()" required>
             <option value="" selected>Choisir un âge</option>
             <option value="0-2ans">0-2 ans (Bébés)</option>
             <option value="3-5ans">3-5 ans (Petite enfance)</option>
@@ -28,35 +28,22 @@
         </select>
 
         <label for="sexe">Sexe :</label>
-        <select name="sexe" id="sexe">
+        <select name="sexe" id="sexe" required>
             <option value="" selected>Choisir un sexe</option>
             <option value="masculin">Masculin</option>
             <option value="feminine">Féminin</option>
         </select>
 
         <label for="interest">Centre d'intérêt :</label>
-        <select name="interest" id="interest">
+        <select name="interest" id="interest" required>
             <option value="" selected>Choisir un centre d'intérêt</option>
         </select>
 
         <label for="occasion">Occasion :</label>
-        <select name="occasion" id="occasion">
+        <select name="occasion" id="occasion" required>
             <option value="" selected>Choisir une occasion</option>
         </select>
 
-        <label for="relation">Relation avec le destinataire :</label>
-        <select name="relation" id="relation">
-            <option value="" selected>Choisir une relation</option>
-            <option value="parent">Parent</option>
-            <option value="ami">Ami</option>
-            <option value="collegue">Collègue</option>
-            <option value="conjoint">Conjoint(e)</option>
-            <option value="enfant">Enfant</option>
-            <option value="frere_soeur">Frère/Sœur</option>
-            <option value="grand_parent">Grand-parent</option>
-            <option value="enseignant">Enseignant(e)</option>
-            <option value="voisin">Voisin(e)</option>
-        </select>
 
         <div class="button-container">
             <button type="submit" class="submit-button">Obtenir des recommandations</button>
@@ -72,18 +59,53 @@
         <pre>{{ result }}</pre>
         {% if 'naissance' in result.lower() %}
         <p><b>Vous pouvez consulter d'autres idées de cadeaux de naissance ici :</b>
-            <a href='https://www.cadeaux.com/cadeau-naissance' class="gift-link">
+            <a href='https://www.cadeaux.com/cadeau-naissance' class="gift-link" target="_blank">
                 Cadeau de Naissance
             </a>
         </p>
         {% endif %}
         {% if 'anniversaire' in result.lower() and ('homme' in result.lower() or 'garçon' in result.lower()) %}
         <p><b>Vous pouvez consulter d'autres idées de cadeaux d'anniversaire ici :</b>
-            <a href='https://www.cadeaux.com/cadeau-anniversaire?filter_product%5Bsort%5D=best_seller&filter_product%5Bfilters%5D%5Bdestinataire%5D%5B%5D=1&filter_product%5Bfilters%5D%5Bdestinataire%5D%5B%5D=9&page=1' class="gift-link">
-                Cadeau d'Anniversaire
+            <a href='https://www.cadeaux.com/cadeau-anniversaire?filter_product%5Bsort%5D=best_seller&filter_product%5Bfilters%5D%5Bdestinataire%5D%5B%5D=1&filter_product%5Bfilters%5D%5Bdestinataire%5D%5B%5D=9&page=1' 
+            class="gift-link" target="_blank">
+                Cadeau d'Anniversaire 
+            </a>
+        {% endif %}
+
+        {% if 'bébé' in result.lower()%}
+        <p><b>Vous pouvez consulter d'autres idées pour un bébé : </b>
+            <a href='https://www.cadeaux.com/cadeau-anniversaire?filter_product%5Bsort%5D=best_seller&filter_product%5Bfilters%5D%5Bdestinataire%5D%5B%5D=10&page=1'
+             class="gift-link" target="_blank">
+                Cadeau de bébé 
             </a>
         </p>
         {% endif %}
+
+        {% if 'mariage' in result.lower()%}
+        <p><b>Vous pouvez consulter d'autres idées pour mariage : </b>
+            <a href='https://www.cadeaux.com/cadeau-mariage'
+             class="gift-link" target="_blank">
+                Cadeau de bébé 
+            </a>
+        </p>
+        {% endif %}
+
+        {% if 'femme' in result.lower()%}
+        <p><b>Vous pouvez consulter d'autres idées pour une femme : </b>
+            <a href='https://www.cadeaux.com/cadeau-anniversaire?filter_product%5Bsort%5D=best_seller&filter_product%5Bfilters%5D%5Bdestinataire%5D%5B%5D=2&page=1'
+             class="gift-link" target="_blank">Cadeau de femme
+            </a>
+        </p>
+        {% endif %}
+
+        {% if 'adolescent' in result.lower()%}
+        <p><b>Vous pouvez consulter d'autres idées pour une occasion de mariage : </b>
+            <a href='https://www.cadeaux.com/cadeau-mariage'
+             class="gift-link" target="_blank">Cadeau de mariage
+            </a>
+        </p>
+        {% endif %}
+
     </div>
 
     {% else %}
