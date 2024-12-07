@@ -6,7 +6,7 @@ from models.engine_base import InterfaceEngine
 class InterfaceEngine_41_60ans(InterfaceEngine):
     #femme------------------------------------------------------------------------------------------------------------------
     #anniversaire
-    @Rule(Cadeau(age="41_60ans", sexe="feminine", interest="jardinage", occasion="anniversaire"))
+    @Rule(Cadeau(age="41-60ans", sexe="feminine", interest="jardinage", occasion="anniversaire"))
     def femme_anniversaire_jardinage(self):
         self.declare(Resultat(result=("Pour une femme aimant le jardinage, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Un ensemble d'outils de jardinage ergonomiques (sécateur, pelle, râteau, etc.) \n"
@@ -17,7 +17,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Un composteur compact pour recycler les déchets organiques \n"
                                         "- Un arrosoir design ou une fontaine décorative pour le jardin")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="feminine", interest="décoration", occasion="anniversaire"))
+    @Rule(Cadeau(age="41-60ans", sexe="feminine", interest="décoration", occasion="anniversaire"))
     def femme_anniversaire_décoration(self):
         self.declare(Resultat(result=("Pour une femme aimant la décoration, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Un vase design ou artisanal pour embellir son intérieur \n"
@@ -29,7 +29,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Une horloge murale unique ou vintage pour une touche d’élégance \n"
                                         "- Des plantes d’intérieur avec des pots assortis pour ajouter une touche de verdure")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="feminine", interest="voyage", occasion="anniversaire"))
+    @Rule(Cadeau(age="41-60ans", sexe="feminine", interest="voyage", occasion="anniversaire"))
     def femme_anniversaire_voyage(self):
         self.declare(Resultat(result=("Pour une femme aimant le voyage, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Une valise élégante et légère avec des compartiments pratiques \n"
@@ -41,7 +41,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Un oreiller de voyage ergonomique pour les longs trajets \n"
                                         "- Un appareil photo instantané pour capturer des souvenirs uniques")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="feminine", interest="cuisine", occasion="anniversaire"))
+    @Rule(Cadeau(age="41-60ans", sexe="feminine", interest="cuisine", occasion="anniversaire"))
     def femme_anniversaire_cuisine(self):
         self.declare(Resultat(result=("Pour une femme aimant la cuisine, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Un robot culinaire multifonction pour faciliter la préparation des repas \n"
@@ -53,7 +53,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Un cours de cuisine en ligne ou en présentiel avec un chef \n"
                                         "- Une cocotte en fonte ou un plat de cuisson de haute qualité")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="feminine", interest="livres", occasion="anniversaire"))
+    @Rule(Cadeau(age="41-60ans", sexe="feminine", interest="livres", occasion="anniversaire"))
     def femme_anniversaire_livres(self):
         self.declare(Resultat(result=("Pour une femme aimant les livres, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Une édition collector ou illustrée de son livre préféré \n"
@@ -64,7 +64,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Un set de livres inspirants ou motivants sur le développement personnel \n"
                                         "- Un ouvrage de cuisine, de voyage ou de décoration selon ses centres d’intérêt secondaires")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="feminine", interest="jeux_de_société", occasion="anniversaire"))
+    @Rule(Cadeau(age="41-60ans", sexe="feminine", interest="jeux_de_société", occasion="anniversaire"))
     def femme_anniversaire_jeux_de_société(self):
         self.declare(Resultat(result=("Pour une femme aimant les jeux de société, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Un jeu de société stratégique comme **Catan**, **Ticket to Ride** ou **Carcassonne** \n"
@@ -75,7 +75,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Un abonnement à une box mensuelle de jeux de société pour découvrir de nouveaux jeux chaque mois \n"
                                         "- Un livre ou un guide sur les stratégies de jeux de société pour améliorer ses compétences")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="feminine", interest="mode", occasion="anniversaire"))
+    @Rule(Cadeau(age="41-60ans", sexe="feminine", interest="mode", occasion="anniversaire"))
     def femme_anniversaire_mode(self):
         self.declare(Resultat(result=("Pour une femme aimant la mode, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Un sac à main de créateur ou une marque tendance \n"
@@ -89,7 +89,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
 
     #femme------------------------------------------------------------------------------------------------------------------
     #Retraite
-    @Rule(Cadeau(age="41_60ans", sexe="feminine", interest="jardinage", occasion="retraite"))
+    @Rule(Cadeau(age="41-60ans", sexe="feminine", interest="jardinage", occasion="retraite"))
     def femme_retraite_jardinage(self):
         self.declare(Resultat(result=("Pour une femme aimant le jardinage, voici des idées de cadeaux pour sa retraite : \n"
                                         "- Une lampe solaire pour éclairer son jardin de manière écologique \n"
@@ -101,7 +101,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Un calendrier ou une application de jardinage pour planifier les semis et récoltes \n"
                                         "- Une jardinière ou un pot design pour mettre en valeur ses plantations.")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="feminine", interest="décoration", occasion="retraite"))
+    @Rule(Cadeau(age="41-60ans", sexe="feminine", interest="décoration", occasion="retraite"))
     def femme_retraite_décoration(self):
         self.declare(Resultat(result=("Pour une femme aimant la décoration, voici des idées de cadeaux pour sa retraite : \n"
                                         "- Une nappe ou des sets de table stylés pour agrémenter sa table à manger \n"
@@ -112,7 +112,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Une œuvre d’art ou une sculpture pour une pièce maîtresse unique \n"
                                         "- Un atelier ou un cours pour apprendre à réaliser des objets de décoration faits maison.")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="feminine", interest="voyage", occasion="retraite"))
+    @Rule(Cadeau(age="41-60ans", sexe="feminine", interest="voyage", occasion="retraite"))
     def femme_retraite_voyage(self):
         self.declare(Resultat(result=("Pour une femme aimant le voyage, voici des idées de cadeaux pour sa retraite : \n"
                                         "- Une pochette de passeport avec un design chic et fonctionnel \n"
@@ -123,7 +123,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Une expérience de voyage comme un séjour en spa, une nuit insolite, ou un city tour \n"
                                         "- Un coffret cadeau avec des bons pour des excursions ou des activités locales.")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="feminine", interest="cuisine", occasion="retraite"))
+    @Rule(Cadeau(age="41-60ans", sexe="feminine", interest="cuisine", occasion="retraite"))
     def femme_retraite_cuisine(self):
         self.declare(Resultat(result=("Pour une femme aimant la cuisine, voici des idées de cadeaux pour sa retraite : \n"
                                         "- Une planche à découper en bois gravée avec un design unique \n"
@@ -134,7 +134,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Une carte cadeau pour un magasin spécialisé en matériel de cuisine \n"
                                         "- Un abonnement à un service de livraison de box de cuisine ou de produits gastronomiques.")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="feminine", interest="livres", occasion="retraite"))
+    @Rule(Cadeau(age="41-60ans", sexe="feminine", interest="livres", occasion="retraite"))
     def femme_retraite_livres(self):
         self.declare(Resultat(result=("Pour une femme aimant les livres, voici des idées de cadeaux pour sa retraite : \n"
                                         "- Un fauteuil ou un coussin de lecture confortable pour créer un coin lecture parfait \n"
@@ -145,8 +145,8 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Un cours ou atelier d'écriture pour développer sa créativité littéraire \n"
                                         "- Un agenda ou un calendrier littéraire avec des citations et des recommandations.")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="feminine", interest="jeux_de_société", occasion="retraite"))
-    def femme_anniversaire_jeux_de_société(self):
+    @Rule(Cadeau(age="41-60ans", sexe="feminine", interest="jeux_de_société", occasion="retraite"))
+    def femme_retraite_jeux_de_société(self):
         self.declare(Resultat(result=("Pour une femme aimant les jeux de société, voici des idées de cadeaux pour sa retraite : \n"
                                         "- Un porte-cartes ou un organiser pour ranger et protéger ses jeux de société \n"
                                         "- Un jeu de société personnalisé avec ses propres règles ou thème préféré \n"
@@ -156,7 +156,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Un set de jeux de cartes comme **Uno**, **Poker**, ou **Cards Against Humanity** \n"
                                         "- Un jeu éducatif ou culturel pour enrichir ses connaissances tout en s'amusant.")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="feminine", interest="mode", occasion="retraite"))
+    @Rule(Cadeau(age="41-60ans", sexe="feminine", interest="mode", occasion="retraite"))
     def femme_retraite_mode(self):
         self.declare(Resultat(result=("Pour une femme aimant la mode, voici des idées de cadeaux pour sa retraite : \n"
                                     "- Un abonnement à un magazine de mode pour suivre les dernières tendances \n"
@@ -168,7 +168,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
 
     #homme------------------------------------------------------------------------------------------------------------------
     #anniversaire
-    @Rule(Cadeau(age="41_60ans", sexe="masculin", interest="jardinage", occasion="anniversaire"))
+    @Rule(Cadeau(age="41-60ans", sexe="masculin", interest="jardinage", occasion="anniversaire"))
     def homme_anniversaire_jardinage(self):
         self.declare(Resultat(result=("Pour un homme aimant le jardinage, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Un kit complet d'outils de jardinage (bêche, sécateur, râteau, etc.) \n"
@@ -179,7 +179,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Une fontaine de jardin ou un bassin pour ajouter une touche de sérénité \n"
                                         "- Un abonnement à un magazine de jardinage pour des conseils et des idées")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="masculin", interest="décoration", occasion="anniversaire"))
+    @Rule(Cadeau(age="41-60ans", sexe="masculin", interest="décoration", occasion="anniversaire"))
     def homme_anniversaire_décoration(self):
         self.declare(Resultat(result=("Pour un homme aimant la décoration, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Une horloge murale design ou vintage pour embellir une pièce \n"
@@ -190,7 +190,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Un vase ou une sculpture contemporaine pour la table ou les étagères \n"
                                         "- Une bibliothèque ou une étagère murale au design unique \n")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="masculin", interest="voyage", occasion="anniversaire"))
+    @Rule(Cadeau(age="41-60ans", sexe="masculin", interest="voyage", occasion="anniversaire"))
     def homme_anniversaire_voyage(self):
         self.declare(Resultat(result=("Pour un homme aimant le voyage, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Une valise légère et robuste ou un sac de voyage élégant \n"
@@ -202,7 +202,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Un carnet de voyage personnalisé pour noter ses souvenirs \n"
                                         "- Une gourde réutilisable ou une bouteille filtrante pour les aventuriers")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="masculin", interest="cuisine", occasion="anniversaire"))
+    @Rule(Cadeau(age="41-60ans", sexe="masculin", interest="cuisine", occasion="anniversaire"))
     def homme_anniversaire_cuisine(self):
         self.declare(Resultat(result=("Pour un homme aimant la cuisine, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Un ensemble de couteaux de cuisine haut de gamme ou personnalisés \n"
@@ -213,7 +213,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Un cours de cuisine en ligne ou en présentiel avec un chef professionnel \n"
                                         "- Une cocotte ou un faitout en fonte de haute qualité")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="masculin", interest="livres", occasion="anniversaire"))
+    @Rule(Cadeau(age="41-60ans", sexe="masculin", interest="livres", occasion="anniversaire"))
     def homme_anniversaire_livres(self):
         self.declare(Resultat(result=("Pour un homme aimant les livres, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Une collection complète de son auteur préféré ou un livre rare \n"
@@ -224,7 +224,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Un agenda ou carnet de notes élégant pour un amateur de lecture et d'écriture \n"
                                         "- Une liseuse électronique (si elle n'est pas déjà en sa possession) \n")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="masculin", interest="jeux_de_société", occasion="anniversaire"))
+    @Rule(Cadeau(age="41-60ans", sexe="masculin", interest="jeux_de_société", occasion="anniversaire"))
     def homme_anniversaire_jeux_de_société(self):
         self.declare(Resultat(result=("Pour un homme aimant les jeux de société, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Une version premium ou collector de son jeu de société préféré \n"
@@ -235,7 +235,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Un livre ou guide sur les stratégies pour les jeux qu'il aime \n"
                                         "- Des accessoires personnalisés comme des dés uniques ou des pions en métal")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="masculin", interest="mode", occasion="anniversaire"))
+    @Rule(Cadeau(age="41-60ans", sexe="masculin", interest="mode", occasion="anniversaire"))
     def homme_anniversaire_mode(self):
         self.declare(Resultat(result=("Pour un homme aimant la mode, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Une montre élégante adaptée à son style (classique, moderne ou sportif) \n"
@@ -249,7 +249,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
 
     #homme------------------------------------------------------------------------------------------------------------------
     #retraite
-    @Rule(Cadeau(age="41_60ans", sexe="masculin", interest="jardinage", occasion="retraite"))
+    @Rule(Cadeau(age="41-60ans", sexe="masculin", interest="jardinage", occasion="retraite"))
     def homme_retraite_jardinage(self):
         self.declare(Resultat(result=("Pour un homme aimant le jardinage, voici des idées de cadeaux pour sa retraite : \n"
                                         "- Un livre spécialisé sur le jardinage ou l'horticulture \n"
@@ -260,7 +260,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Des accessoires décoratifs pour le jardin comme des statues, des lanternes ou des guirlandes lumineuses \n"
                                         "- Un kit de culture en intérieur pour cultiver des herbes fraîches toute l'année.")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="masculin", interest="décoration", occasion="retraite"))
+    @Rule(Cadeau(age="41-60ans", sexe="masculin", interest="décoration", occasion="retraite"))
     def homme_retraite_décoration(self):
         self.declare(Resultat(result=("Pour un homme aimant la décoration, voici des idées de cadeaux pour sa retraite : \n"
                                         "- Des cadres photo personnalisés pour afficher des souvenirs précieux \n"
@@ -271,7 +271,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Une lampe ou un luminaire intelligent contrôlé par une application \n"
                                         "- Des accessoires de décoration sur un thème qu'il apprécie (nature, voyages, minimalisme, etc.).")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="masculin", interest="voyage", occasion="retraite"))
+    @Rule(Cadeau(age="41-60ans", sexe="masculin", interest="voyage", occasion="retraite"))
     def homme_retraite_voyage(self):
         self.declare(Resultat(result=("Pour un homme aimant le voyage, voici des idées de cadeaux pour sa retraite : \n"
                                         "- Un abonnement à une box de découverte culturelle (ex. cuisine du monde) \n"
@@ -281,7 +281,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Des accessoires pour voyager en toute sérénité, comme des écouteurs anti-bruit ou un masque de sommeil \n"
                                         "- Un abonnement à une application de voyage ou à un magazine spécialisé dans le tourisme.")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="masculin", interest="cuisine", occasion="retraite"))
+    @Rule(Cadeau(age="41-60ans", sexe="masculin", interest="cuisine", occasion="retraite"))
     def homme_retraite_cuisine(self):
         self.declare(Resultat(result=("Pour un homme aimant la cuisine, voici des idées de cadeaux pour sa retraite : \n"
                                         "- Des épices rares ou un coffret d'huiles d'olive aromatisées \n"
@@ -292,7 +292,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Un set de verres à vin ou un décanteur pour accompagner ses repas \n"
                                         "- Une pierre à pizza ou un four à pizza portable pour des soirées conviviales.")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="masculin", interest="livres", occasion="retraite"))
+    @Rule(Cadeau(age="41-60ans", sexe="masculin", interest="livres", occasion="retraite"))
     def homme_retraite_livres(self):
         self.declare(Resultat(result=("Pour un homme aimant les livres, voici des idées de cadeaux pour sa retraite : \n"
                                         "- Une lampe de lecture flexible et rechargeable pour lire confortablement la nuit \n"
@@ -303,7 +303,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Des livres de développement personnel ou de business, s'il s'y intéresse \n"
                                         "- Une carte cadeau dans sa librairie préférée pour qu'il choisisse lui-même ses lectures.")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="masculin", interest="jeux_de_société", occasion="retraite"))
+    @Rule(Cadeau(age="41-60ans", sexe="masculin", interest="jeux_de_société", occasion="retraite"))
     def homme_retraite_jeux_de_société(self):
         self.declare(Resultat(result=("Pour un homme aimant les jeux de société, voici des idées de cadeaux pour sa retraite : \n"
                                         "- Une boîte de rangement ou un organiseur pour ses jeux de société \n"
@@ -314,7 +314,7 @@ class InterfaceEngine_41_60ans(InterfaceEngine):
                                         "- Une application compagnon pour jeux de société, si disponible pour ses jeux favoris \n"
                                         "- Des extensions pour ses jeux existants, offrant de nouvelles aventures et défis.")))
 
-    @Rule(Cadeau(age="41_60ans", sexe="masculin", interest="mode", occasion="retraite"))
+    @Rule(Cadeau(age="41-60ans", sexe="masculin", interest="mode", occasion="retraite"))
     def homme_retraite_mode(self):
         self.declare(Resultat(result=("Pour un homme aimant la mode, voici des idées de cadeaux pour sa retraite : \n"
                                         "- Un sac à main de créateur ou une marque tendance \n"

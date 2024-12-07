@@ -59,7 +59,7 @@ class InterfaceEngine_18_24ans(InterfaceEngine):
                                         "- Une corde à sauter de qualité professionnelle pour les entraînements à domicile \n"
                                         "- Une bouteille d’eau isotherme pour rester hydratée pendant les entraînements.")))
 
-    @Rule(Cadeau(age="18-24ans", sexe="feminine", interest="jeux_video", occasion="anniversaire"))
+    @Rule(Cadeau(age="18-24ans", sexe="feminine", interest="jeux_vidéo", occasion="anniversaire"))
     def fille_anniversaire_jeux_video(self):
         self.declare(Resultat(result=("Pour une jeune femme adulte aimant les jeux video, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Une console de jeu dernière génération (PS5, Xbox Series X, Nintendo Switch) \n"
@@ -125,7 +125,7 @@ class InterfaceEngine_18_24ans(InterfaceEngine):
                                         "- Une paire de baskets de sport adaptées à son activité préférée (running, tennis, danse, etc.) \n"
                                         "- Une bouteille d’eau isotherme pour rester hydratée pendant les entraînements.")))
 
-    @Rule(Cadeau(age="18-24ans", sexe="feminine", interest="jeux_video", occasion="graduation"))
+    @Rule(Cadeau(age="18-24ans", sexe="feminine", interest="jeux_vidéo", occasion="graduation"))
     def fille_graduation_jeux_video(self):
         self.declare(Resultat(result=("Pour une jeune femme adulte aimant les jeux video, voici des idées de cadeaux pour sa graduation : \n"
                                         "- Une lampe LED ou un éclairage d'ambiance pour personnaliser son espace de jeu \n"
@@ -141,7 +141,7 @@ class InterfaceEngine_18_24ans(InterfaceEngine):
     #anniversaire
     @Rule(Cadeau(age="18-24ans", sexe="masculin", interest="mode", occasion="anniversaire"))
     def garcon_anniversaire_mode(self):
-        self.declare(Resultat(result=("Pour une jeune homme adulte aimant la mode, voici des idées de cadeaux pour son anniversaire : \n"
+        self.declare(Resultat(result=("Pour un jeune homme adulte aimant la mode, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Une montre ou bracelet \n"
                                         "- Une paire de baskets design de marques populaires (Nike, Adidas, etc.) \n"
                                         "- Un manteau ou une veste en cuir de qualité \n"
@@ -152,7 +152,7 @@ class InterfaceEngine_18_24ans(InterfaceEngine):
 
     @Rule(Cadeau(age="18-24ans", sexe="masculin", interest="voyage", occasion="anniversaire"))
     def garcon_anniversaire_voyage(self):
-        self.declare(Resultat(result=("Pour une jeune homme adulte aimant le voyage, voici des idées de cadeaux pour son anniversaire : \n"
+        self.declare(Resultat(result=("Pour un jeune homme adulte aimant le voyage, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Un sac à dos de voyage ultra-pratique et résistant \n"
                                         "- Une valise cabine légère et robuste \n"
                                         "- Un carnet de voyage pour documenter ses aventures \n"
@@ -164,7 +164,7 @@ class InterfaceEngine_18_24ans(InterfaceEngine):
 
     @Rule(Cadeau(age="18-24ans", sexe="masculin", interest="technologie", occasion="anniversaire"))
     def garcon_anniversaire_technologie(self):
-        self.declare(Resultat(result=("Pour une jeune homme adulte aimant la technologie, voici des idées de cadeaux pour son anniversaire : \n"
+        self.declare(Resultat(result=("Pour un jeune homme adulte aimant la technologie, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Un haut-parleur Bluetooth portable \n"
                                         "- Un écran portable ou un projecteur mini pour les présentations ou les projections de films \n"
                                         "- Un casque ou des écouteurs Bluetooth de haute qualité \n"
@@ -177,7 +177,7 @@ class InterfaceEngine_18_24ans(InterfaceEngine):
 
     @Rule(Cadeau(age="18-24ans", sexe="masculin", interest="livres", occasion="anniversaire"))
     def garcon_anniversaire_livres(self):
-        self.declare(Resultat(result=("Pour une jeune homme adulte aimant les livres, voici des idées de cadeaux pour son anniversaire : \n"
+        self.declare(Resultat(result=("Pour un jeune homme adulte aimant les livres, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Un abonnement à un service de livres audio (Audible, par exemple) \n"
                                         "- Un livre de développement personnel ou de bien-être \n"
                                         "- Une édition spéciale ou collector d’un de ses livres préférés \n"
@@ -187,7 +187,7 @@ class InterfaceEngine_18_24ans(InterfaceEngine):
 
     @Rule(Cadeau(age="18-24ans", sexe="masculin", interest="sport", occasion="anniversaire"))
     def garcon_anniversaire_sport(self):
-        self.declare(Resultat(result=("Pour une jeune homme adulte aimant le sport, voici des idées de cadeaux pour son anniversaire : \n"
+        self.declare(Resultat(result=("Pour un jeune homme adulte aimant le sport, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Un abonnement à une salle de sport ou à un club sportif \n"
                                         "- Un équipement sportif de qualité (gant de boxe, chaussures de course, etc.) \n"
                                         "- Une tenue de sport de marque \n"
@@ -197,9 +197,9 @@ class InterfaceEngine_18_24ans(InterfaceEngine):
                                         "- Une corde à sauter de qualité professionnelle pour les entraînements à domicile \n"
                                         "- Un billet pour un match de sport ou un événement sportif majeur de son choix")))
 
-    @Rule(Cadeau(age="18-24ans", sexe="masculin", interest="jeux_video", occasion="anniversaire"))
+    @Rule(Cadeau(age="18-24ans", sexe="masculin", interest="jeux_vidéo", occasion="anniversaire"))
     def garcon_anniversaire_jeux_video(self):
-        self.declare(Resultat(result=("Pour une jeune homme adulte aimant les jeux video, voici des idées de cadeaux pour son anniversaire : \n"
+        self.declare(Resultat(result=("Pour un jeune homme adulte aimant les jeux video, voici des idées de cadeaux pour son anniversaire : \n"
                                         "- Un kit de personnalisation pour sa console (skins, autocollants, étuis, etc.) \n"
                                         "- Une console de jeu dernière génération (PS5, Xbox Series X, Nintendo Switch) \n"
                                         "- Un abonnement à un service de jeux en ligne comme Xbox Game Pass ou Nintendo Switch Online \n"
@@ -214,7 +214,7 @@ class InterfaceEngine_18_24ans(InterfaceEngine):
     #graduation
     @Rule(Cadeau(age="18-24ans", sexe="masculin", interest="mode", occasion="graduation"))
     def garcon_graduation_mode(self):
-        self.declare(Resultat(result=("Pour une jeune homme adulte aimant la mode, voici des idées de cadeaux pour sa graduation : \n"
+        self.declare(Resultat(result=("Pour un jeune homme adulte aimant la mode, voici des idées de cadeaux pour sa graduation : \n"
                                         "- Un portefeuille ou une ceinture en cuir de marque \n"
                                         "- Une montre ou bracelet \n"
                                         "- Une paire de baskets design de marques populaires (Nike, Adidas, etc.) \n"
@@ -226,7 +226,7 @@ class InterfaceEngine_18_24ans(InterfaceEngine):
     
     @Rule(Cadeau(age="18-24ans", sexe="masculin", interest="voyage", occasion="graduation"))
     def garcon_graduation_voyage(self):
-        self.declare(Resultat(result=("Pour une jeune homme adulte aimant le voyage, voici des idées de cadeaux pour sa graduation : \n"
+        self.declare(Resultat(result=("Pour un jeune homme adulte aimant le voyage, voici des idées de cadeaux pour sa graduation : \n"
                                         "- Une tente ou un équipement de camping pour les amateurs de nature \n"
                                         "- Un sac à dos de voyage ultra-pratique et résistant \n"
                                         "- Une valise cabine légère et robuste \n"
@@ -239,7 +239,7 @@ class InterfaceEngine_18_24ans(InterfaceEngine):
 
     @Rule(Cadeau(age="18-24ans", sexe="masculin", interest="technologie", occasion="graduation"))
     def garcon_graduation_technologie(self):
-        self.declare(Resultat(result=("Pour une jeune homme adulte aimant la technologie, voici des idées de cadeaux pour sa graduation : \n"
+        self.declare(Resultat(result=("Pour un jeune homme adulte aimant la technologie, voici des idées de cadeaux pour sa graduation : \n"
                                         "- Un clavier mécanique ou une souris gaming ergonomique \n"
                                         "- Un écran portable ou un projecteur mini pour les présentations ou les projections de films \n"
                                         "- Un appareil photo numérique ou un appareil instantané pour capturer des moments spéciaux \n"
@@ -251,7 +251,7 @@ class InterfaceEngine_18_24ans(InterfaceEngine):
 
     @Rule(Cadeau(age="18-24ans", sexe="masculin", interest="livres", occasion="graduation"))
     def garcon_graduation_livres(self):
-        self.declare(Resultat(result=("Pour une jeune homme adulte aimant les livres, voici des idées de cadeaux pour sa graduation : \n"
+        self.declare(Resultat(result=("Pour un jeune homme adulte aimant les livres, voici des idées de cadeaux pour sa graduation : \n"
                                         "- Un abonnement à un service de livres audio (Audible, par exemple) \n"
                                         "- Un livre de développement personnel ou de bien-être \n"
                                         "- Une édition spéciale ou collector d’un de ses livres préférés \n"
@@ -262,7 +262,7 @@ class InterfaceEngine_18_24ans(InterfaceEngine):
 
     @Rule(Cadeau(age="18-24ans", sexe="masculin", interest="sport", occasion="graduation"))
     def garcon_graduation_sport(self):
-        self.declare(Resultat(result=("Pour une jeune homme adulte aimant le sport, voici des idées de cadeaux pour sa graduation : \n"
+        self.declare(Resultat(result=("Pour un jeune homme adulte aimant le sport, voici des idées de cadeaux pour sa graduation : \n"
                                         "- Un coach personnel ou une application de sport pour améliorer ses performances \n"
                                         "- Un sac de gym personnalisé avec ses initiales \n"
                                         "- Une tenue de sport de marque \n"
@@ -272,9 +272,9 @@ class InterfaceEngine_18_24ans(InterfaceEngine):
                                         "- Une paire de baskets de sport adaptées à son activité préférée (running, tennis, danse, etc.) \n"
                                         "- Un massage sportif ou une séance de kinésithérapie pour récupérer après un entraînement intense")))
 
-    @Rule(Cadeau(age="18-24ans", sexe="masculin", interest="jeux_video", occasion="graduation"))
+    @Rule(Cadeau(age="18-24ans", sexe="masculin", interest="jeux_vidéo", occasion="graduation"))
     def garcon_graduation_jeux_video(self):
-        self.declare(Resultat(result=("Pour une jeune homme adulte aimant les jeux video, voici des idées de cadeaux pour sa graduation : \n"
+        self.declare(Resultat(result=("Pour un jeune homme adulte aimant les jeux video, voici des idées de cadeaux pour sa graduation : \n"
                                         "- Une manette de jeu personnalisée ou un accessoire gaming (clavier mécanique, souris de gaming, etc.) \n"
                                         "- Une lampe LED ou un éclairage d'ambiance pour personnaliser son espace de jeu \n"
                                         "- Une console de jeu dernière génération (PS5, Xbox Series X, Nintendo Switch) \n"

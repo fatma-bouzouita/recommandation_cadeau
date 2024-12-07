@@ -64,36 +64,132 @@
             </a>
         </p>
         {% endif %}
-        {% if 'anniversaire' in result.lower() and ('homme' in result.lower() or 'garçon' in result.lower()) %}
-        <p><b>Vous pouvez consulter d'autres idées de cadeaux d'anniversaire ici :</b>
-            <a href='https://www.cadeaux.com/cadeau-anniversaire?filter_product%5Bsort%5D=best_seller&filter_product%5Bfilters%5D%5Bdestinataire%5D%5B%5D=1&filter_product%5Bfilters%5D%5Bdestinataire%5D%5B%5D=9&page=1' 
+
+        {% if 'voyage' in result.lower() %}
+        <p><b>Vous pouvez consulter d'autres idées de cadeaux ici :</b>
+            <a href='https://www.amazon.in/Travel-Gifts/s?k=Travel+Gifts' 
             class="gift-link" target="_blank">
-                Cadeau d'Anniversaire 
+                Cadeaux de voyage 
+            </a>
+        {% endif %}
+
+        {% if 'technologie' in result.lower() %}
+        <p><b>Vous pouvez consulter d'autres idées de cadeaux ici :</b>
+            <a href='https://www.amazon.com/tech-gift-ideas/s?k=tech+gift+ideas' 
+            class="gift-link" target="_blank">
+                Idées de cadeaux technologiques 
+            </a>
+        {% endif %}
+
+        {% if 'livres' in result.lower()%}
+        <p><b>Vous pouvez consulter d'autres idées de cadeaux ici :</b>
+            <a href='https://www.amazon.com/book-gifts/s?k=book+gifts' 
+            class="gift-link" target="_blank">
+                Cadeaux de livres 
+            </a>
+        {% endif %}
+
+        {% if 'sport' in result.lower() %}
+        <p><b>Vous pouvez consulter d'autres idées de cadeaux ici :</b>
+            <a href='https://www.amazon.com/sports-gifts/s?k=sports+gifts' 
+            class="gift-link" target="_blank">
+                Cadeau de sport 
+            </a>
+        {% endif %}
+
+        {% if ('homme' in result.lower() and 'mode' in result.lower()) %}
+        <p><b>Vous pouvez consulter d'autres idées de cadeaux ici :</b>
+            <a href='https://www.myntra.com/shop/men' 
+            class="gift-link" target="_blank">
+                Shop for him 
+            </a>
+        {% endif %}
+
+        {% if ('femme' in result.lower() and 'mode' in result.lower()) %}
+        <p><b>Vous pouvez consulter d'autres idées de cadeaux ici :</b>
+            <a href='https://www.asos.com/women/' 
+            class="gift-link" target="_blank">
+                Shop for her 
+            </a>
+        {% endif %}
+
+        {% if 'cuisine' in result.lower() %}
+        <p><b>Vous pouvez consulter d'autres idées de cadeaux ici :</b>
+            <a href='https://www.kitchenshop.eu/en' 
+            class="gift-link" target="_blank">
+                Cadeau de cuisine
+            </a>
+        {% endif %}
+
+        {% if 'société' in result.lower() %}
+        <p><b>Vous pouvez consulter d'autres idées de cadeaux ici :</b>
+            <a href='https://www.thegamesshop.com.au/' 
+            class="gift-link" target="_blank">
+                Games Shop
+            </a>
+        {% endif %}
+
+        {% if 'art ' in result.lower() %}
+        <p><b>Vous pouvez consulter d'autres idées de cadeaux ici :</b>
+            <a href='https://www.amazon.com/s?k=art+gift+ideas&ref=nb_sb_noss' 
+            class="gift-link" target="_blank">
+                Art Shop
+            </a>
+        {% endif %}
+
+        {% if 'décoration' in result.lower() %}
+        <p><b>Vous pouvez consulter d'autres idées de cadeaux ici :</b>
+            <a href='https://www.amazon.com/home-d%C3%A9cor/b?ie=UTF8&node=1063278' 
+            class="gift-link" target="_blank">
+                Cadeaux de décoration
+            </a>
+        {% endif %}
+
+        {% if 'jardinage' in result.lower() %}
+        <p><b>Vous pouvez consulter d'autres idées de cadeaux ici :</b>
+            <a href='https://www.amazon.fr/cadeau-Jardinage/s?k=cadeau+Jardinage' 
+            class="gift-link" target="_blank">
+                Cadeaux de jardinage
+            </a>
+        {% endif %}
+
+        {% if 'video' in result.lower() %}
+        <p><b>Vous pouvez consulter d'autres idées de cadeaux ici :</b>
+            <a href='https://www.amazon.fr/s?k=cadeau+jeux+video&__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1FLNITZBD3TDK&sprefix=cadeau+jeux+video%2Caps%2C171&ref=nb_sb_noss' 
+            class="gift-link" target="_blank">
+                Cadeaux de jeux vidéo
+            </a>
+        {% endif %}
+
+        {% if 'scientifiques' in result.lower() %}
+        <p><b>Vous pouvez consulter d'autres idées de cadeaux ici :</b>
+            <a href='https://www.amazon.com/s?k=kit+scientifique+gift+ideas&crid=30GIP9QDX1WS6&sprefix=kit+scientifique+gif+ideas%2Caps%2C245&ref=nb_sb_noss' 
+            class="gift-link" target="_blank">
+                Cadeaux de kits scientifiques
+            </a>
+        {% endif %}
+
+        {% if 'musique' in result.lower() %}
+        <p><b>Vous pouvez consulter d'autres idées de cadeaux ici :</b>
+            <a href='https://www.amazon.com/s?k=musicgift+ideas&crid=VM599COBLU66&sprefix=musicgift+ideas%2Caps%2C271&ref=nb_sb_noss_2' 
+            class="gift-link" target="_blank">
+                Cadeaux de musique
+            </a>
+        {% endif %}
+
+        {% if 'construction' in result.lower() %}
+        <p><b>Vous pouvez consulter d'autres idées de cadeaux ici :</b>
+            <a href='https://www.amazon.com/s?k=Jeux+de+construction+gift+ideas&crid=60GUG2BDX955&sprefix=jeux+de+construction+gift+ideas%2Caps%2C232&ref=nb_sb_noss' 
+            class="gift-link" target="_blank">
+                Cadeaux de jeux de construction
             </a>
         {% endif %}
 
         {% if 'bébé' in result.lower()%}
         <p><b>Vous pouvez consulter d'autres idées pour un bébé : </b>
             <a href='https://www.cadeaux.com/cadeau-anniversaire?filter_product%5Bsort%5D=best_seller&filter_product%5Bfilters%5D%5Bdestinataire%5D%5B%5D=10&page=1'
-             class="gift-link" target="_blank">
+            class="gift-link" target="_blank">
                 Cadeau de bébé 
-            </a>
-        </p>
-        {% endif %}
-
-        {% if 'mariage' in result.lower()%}
-        <p><b>Vous pouvez consulter d'autres idées pour mariage : </b>
-            <a href='https://www.cadeaux.com/cadeau-mariage'
-             class="gift-link" target="_blank">
-                Cadeau de bébé 
-            </a>
-        </p>
-        {% endif %}
-
-        {% if 'femme' in result.lower()%}
-        <p><b>Vous pouvez consulter d'autres idées pour une femme : </b>
-            <a href='https://www.cadeaux.com/cadeau-anniversaire?filter_product%5Bsort%5D=best_seller&filter_product%5Bfilters%5D%5Bdestinataire%5D%5B%5D=2&page=1'
-             class="gift-link" target="_blank">Cadeau de femme
             </a>
         </p>
         {% endif %}
