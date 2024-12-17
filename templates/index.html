@@ -269,7 +269,7 @@
                 //create an option with every occasion with age selected
                 data[age].occasions.forEach(occasion => {
                     const option = document.createElement("option");
-                    option.value = occasion.toLowerCase().replace(/ /g, "_");//if there is espace remplace it in value
+                    option.value = occasion.toLowerCase().replace(/ /g, "_");
                     option.textContent = occasion;
                     occasionSelect.appendChild(option);
                 });
@@ -278,7 +278,7 @@
 
         // Function to reset form and results
         function resetForm() {
-            document.getElementById("gift-form").reset();  //default state
+            document.getElementById("gift-form").reset();
             updateOptions();
             clearResults();
         }
